@@ -1,0 +1,171 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{svg}
+
+
+\begin{document}
+
+\title{Enhancing AI Literacy Through Interactive Fruit Ripeness Classification: A Machine Learning Game for K-12 Education}
+
+\author{\IEEEauthorblockN{Sarbagya Malla}
+\IEEEauthorblockA{University of Texas Permian Basin}}
+
+\maketitle
+
+\begin{abstract}
+This project introduces an interactive fruit ripeness classification game leveraging machine learning to enhance AI literacy in K-12 education. The system enables users to train a model using labeled images of ripe and unripe fruit, then test its predictions. By providing hands-on experience with supervised learning through an intuitive user interface and real-time feedback, the game makes machine learning concepts more accessible to students. Additionally, the system incorporates Explainable AI (XAI) techniques to provide transparent explanations for its predictions, further enhancing students' understanding of AI decision-making processes.
+\end{abstract}
+
+\begin{IEEEkeywords}
+AI literacy, interactive game, machine learning, K-12 education, Explainable AI, supervised learning, classification algorithms
+\end{IEEEkeywords}
+
+\section{Introduction and Motivation}
+As machine learning increasingly permeates everyday applications, understanding its principles remains challenging for K-12 students. This project bridges the gap between theoretical AI concepts and practical applications through an engaging, interactive learning activity. By allowing students to train a model and observe its predictions, the project enhances their understanding of AI, classification algorithms, and data-driven decision-making.
+
+Beyond education, fruit ripeness classification is a crucial task in agriculture and food distribution. Farmers, food suppliers, and grocery chains rely on accurate ripeness detection to reduce food waste, improve crop yield predictions, and optimize supply chains. Machine learning models can assist farmers by automatically identifying the best time to harvest crops, ensuring that produce reaches markets at peak quality. Additionally, AI-driven classification can help supermarkets and consumers minimize food spoilage, supporting sustainability efforts.
+
+By integrating Explainable AI (XAI) techniques, students not only gain hands-on experience with AI but also learn how these technologies can be applied in real-world agricultural challenges. This fosters cross-disciplinary learning, encouraging students to explore AI's impact on sustainability, food security, and ethical AI applications in farming.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{p1.png}  
+    \caption{Instance of the UI when running the program}
+    \label{fig:ui1} 
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{p2.png}  
+    \caption{Difference instance of the UI when running the program}
+    \label{fig:ui2} 
+\end{figure}
+\section{Related Work}
+Integrating AI education into K-12 learning is becoming increasingly essential as AI technologies are widely adopted in various industries, including agriculture and food science. AI-powered applications can enhance learning by engaging students with hands-on activities that teach fundamental AI concepts through interactive experiences.
+
+Several studies have emphasized the importance of AI literacy in K-12 education. AI4K12, an initiative for AI education in schools, has developed online resources for teachers, including AI-related videos, interactive tools, and curriculum-aligned activities. Researchers have also designed AI-based educational systems that focus on learner-centered approaches, enhancing students’ understanding of AI decision-making processes. As highlighted in \cite{chen2020}, key design considerations for integrating AI concepts into K-12 education include fostering critical thinking, ethical considerations, and accessibility. Additionally, guidelines for developing effective AI-based learning experiences have been proposed in studies such as \cite{pesek2022, mon2023}.
+
+In the literature, numerous game-based learning approaches have been explored for teaching AI concepts to K-12 students. Prior research introduced interactive AI applications such as a social robot-based learning assistant \cite{wu2020}, game-based reinforcement learning environments \cite{jotsov2022}, and block-based programming platforms designed to teach machine learning and AI principles in an engaging manner \cite{pesek2022}. These studies emphasize the role of hands-on AI tools in fostering conceptual understanding and student engagement.
+
+Recent research has also examined the use of Explainable AI (XAI) techniques in educational contexts. Studies suggest that transparent AI decision-making processes help students build trust and deepen their comprehension of machine learning models \cite{wu2020, mon2023}. Interactive applications, such as visual AI models that explain predictions, have been shown to improve students' understanding of classification algorithms, dataset biases, and AI fairness.
+
+In agricultural AI applications, researchers have developed several models to assist farmers in automated quality detection and harvest optimization \cite{chen2020}. Computer vision techniques have been applied to assess fruit quality using color, texture, and shape analysis \cite{chen2020}. Game-based AI learning approaches, like ArtBot \cite{pesek2022}, have demonstrated that interactive AI experiences can enhance students’ engagement with machine learning concepts.
+
+Building on these foundations, this project introduces an interactive fruit ripeness classification game that allows students to train and test their own machine-learning models using real-world image data. Unlike previous approaches, this system incorporates Explainable AI (XAI) techniques, providing students with clear, visual explanations of the model's decisions. By integrating agriculture-related AI applications into K-12 curricula, this project aims to bridge the gap between AI literacy and real-world problem-solving, reinforcing the relevance of AI in domains like food technology, sustainability, and precision farming.
+
+\section{Design}
+The project features an intuitive user interface implemented using Tkinter, including:
+\begin{itemize}
+    \item A training interface for uploading labeled fruit images
+    \item A testing interface for classifying new images
+    \item A results section displaying model predictions with visual feedback
+    \item Graphical representations of classification accuracy using pie and bar charts
+    \item Explainable AI Features: The system provides explanations for its predictions, allowing students to understand which features of the fruit images influence the model's decisions.
+\end{itemize}
+
+\subsection{Curriculum Alignment}
+The project aligns with AI4K12's Five Big Ideas:
+\begin{itemize}
+    \item Perception: Fruit image analysis as sensor input simulation
+    \item Representation: Comparing human vs. AI feature detection
+    \item Learning: Model accuracy progression tracking
+    \item Natural Interaction: UI design journaling activity
+    \item Societal Impact: Food waste reduction and speed up processes
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{AI big 5.png}  
+    \caption{AI Big 5 Alignment with the program}
+    \label{fig:AI Big 5} 
+\end{figure}
+\subsection{Cross-Disciplinary Connections}
+\begin{itemize}
+    \item Biology: Fruit ripening processes
+    \item Math: Statistical analysis of accuracy metrics
+    \item Ethics: Discussion on agricultural AI impacts
+\end{itemize}
+
+\section{Technical Implementation}
+The system is implemented in Python, incorporating:
+\begin{itemize}
+    \item Image feature extraction using OpenCV
+    \item Tkinter for GUI development
+    \item Matplotlib for data visualization
+    \item A dataset of fruit images labeled as ``ripe'' and ``not ripe''
+    \item Explainable AI Techniques: The model uses techniques like LIME to provide transparent explanations for its predictions, enhancing students' understanding of AI decision-making processes.
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{p3.png}  
+    \caption{Predictions by the trained model}
+    \label{fig: predictions} 
+\end{figure}
+\section{Research Questions, Data Collection Methods, and Learning Activities}
+\subsection{Research Questions}
+\begin{itemize}
+    \item How does the interactive fruit ripeness classification game enhance students' understanding of machine learning and classification algorithms? 
+    \item What is the impact of providing real-time feedback on students' learning about supervised learning techniques?
+    \item How do students perceive the transparency of AI decisions when Explainable AI (XAI) techniques are incorporated into the game?
+    \item Does the game's interactive nature increase student engagement in learning about AI and machine learning?
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{p4.png}  
+    \caption{Model Accuracy}
+    \label{fig: accuracy} 
+\end{figure}
+\subsection{Data Collection Methods}
+\begin{itemize}
+    \item Pre-survey to assess students' prior knowledge of AI
+    \item Post-survey to evaluate learning outcomes and engagement levels
+\end{itemize}
+
+\subsection{Learning Activities}
+\begin{itemize}
+    \item Model training using a dataset of fruit images
+    \item Model testing and prediction accuracy analysis
+    \item Discussions on AI bias and dataset selection
+\end{itemize}
+\section{Future Enhancements}
+The current binary classification approach (ripe/unripe) could be expanded to a multi-stage ripeness assessment system that better reflects the complexity of actual fruit ripening processes. This extension would involve:
+
+\begin{itemize}
+    \item Developing a more granular labeling system with 4-5 distinct ripeness stages (e.g., unripe, early ripening, near-ripe, peak ripeness, overripe)
+    \item Collecting and curating datasets with these refined labels
+    \item Modifying the classification algorithms to support multi-class prediction
+    \item Enhancing the XAI components to explain more subtle distinctions between ripeness stages
+    \item Creating educational activities that help students understand the progression of biochemical changes during ripening
+\end{itemize}
+
+This enhancement would not only improve the agricultural relevance of the system but also introduce students to more advanced classification concepts and the challenges of working with ordinal data categories. Additionally, multi-stage classification would provide opportunities to discuss concepts like confusion matrices and class imbalance, further deepening students' understanding of machine learning evaluation metrics.
+
+
+\section{Conclusion}
+This project provides an engaging and effective way to teach K-12 students about AI and machine learning, focusing on supervised learning and Explainable AI. The interactive fruit ripeness classification game fosters deeper learning and understanding by offering hands-on experiences and transparent model decision-making.
+
+
+\bibliographystyle{IEEEtran}
+
+\begin{thebibliography}{99}
+
+\bibitem{chen2020}
+Chen, L., Chen, P., \& Lin, Z. (2020). Artificial Intelligence in Education: A Review. \textit{IEEE Access}, 8, 75264-75278.
+
+\bibitem{pesek2022}
+Pesek, I., Nosović, N., \& Krašna, M. (2022). The Role of AI in the Education and for the Education. In \textit{2022 11th Mediterranean Conference on Embedded Computing (MECO)} (pp. 1-4).
+
+\bibitem{mon2023}
+Mon, B. F., Wasfi, A., Hayajneh, M., \& Slim, A. (2023). A Study on Role of Artificial Intelligence in Education. In \textit{2023 International Conference on Computing, Electronics \& Communications Engineering (iCCECE)} (pp. 133-138).
+
+\bibitem{wu2020}
+Wu, J. (2020). Machine Learning in Education. In \textit{2020 International Conference on Modern Education and Information Management (ICMEIM)} (pp. 56-63).
+
+\bibitem{jotsov2022}
+Jotsov, V., Abdiakhmetova, Z., Kerimbayev, N., Berdaly, A., \& Zhumakhan, L. (2022). Using Machine Learning Algorithms to Improve Education Process. In \textit{2022 International Conference Automatics and Informatics (ICAI)} (pp. 78-82).
+
+\bibitem{bhasme2024}
+Bhasme, M., Ulhe, P., \& Gokhe, S. (2024). AI in Agriculture: The Future of Robotic Farming and Automation. In \textit{2024 2nd DMIHER International Conference on Artificial Intelligence in Healthcare, Education and Industry (IDICAIEI)} (pp. 1-7). doi: 10.1109/IDICAIEI61867.2024.10842885.
+
+\end{thebibliography}
+\end{document}
